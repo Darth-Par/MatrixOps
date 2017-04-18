@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15-Apr-2017, 12:41:20 PM
+    Author     : darthpar
+*/
+
+body {
+    padding-bottom: 50px;
+    border-bottom: 30px solid darkgrey;
+    border-radius: 5px;
+}
+
+.row-center {
+    float: none;
+    margin: 0 auto;
+}
+
+.matrix {
+    width: auto;
+}
+
+.matrix-title {
+    padding-top: 25px;
+}
+
+#autoload, #reset, #btn-submit {
+    width: 100%;
+}
+
+.ops-form {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+input {
+    text-align: center;
+}
+
+table.result-matrix td {
+    min-width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.modal-lg {
+    width: 90%;
+    
+}

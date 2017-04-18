@@ -1,0 +1,8 @@
+{
+    "name": "root/project_matrix_ops",
+    "description": "Matrix Operation",
+    "type": "project",
+    "require": {
+	"php": "~7.0.0"
+	}
+}
