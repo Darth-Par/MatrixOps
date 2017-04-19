@@ -313,16 +313,22 @@ $( document ).ready(function() {
                 if (tempRowsA !== tempRowsB || tempColumnsA !== tempColumnsB) {
                     errorStatus = true;
                     errorMsg = `<span class="highlight">Addition or Subtraction:</span>  The number of rows and columns in <span class="highlight">${matrixA}</span> must be equal to the number of rows and columns in <span class="highlight">${matrixB}</span>.  Please fix this to continue.`;
+                    //using break to stop loop and capture error in numeric sequence
+                    break;
                 } 
             } else if (operation === 'multiply') {
                 if (tempColumnsA !== tempRowsB) {
                     errorStatus = true;
                     errorMsg = `<span class="highlight">Multiplication:</span> The number of columns in <span class="highlight">${matrixA}</span> must be equal to the number of rows in <span class="highlight">${matrixB}</span>.  Please fix this in order to continue.`;
+                    //using break to stop loop and capture error in numeric sequence
+                    break;
                 } 
             } else if (operation === 'divide') {
                 if (tempColumnsA !== tempColumnsB) {
                     errorStatus = true;
                     errorMsg = `<span class="highlight">Division:</span>  The number of columns in <span class="highlight">${matrixA}</span> must be equal to the number of columns in <span class="highlight">${matrixB}</span>.  Please fix this to continue.`;
+                    //using break to stop loop and capture error in numeric sequence
+                    break;
                 }
             }
         }
