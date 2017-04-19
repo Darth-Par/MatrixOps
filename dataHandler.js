@@ -296,6 +296,8 @@ $( document ).ready(function() {
         
         for(let i = 1; i < amount; i++) {
             let next = i + 1;
+            let matrixA = 'matrix-' + i;
+            let matrixB = 'matrix-' + next;
             let tempRowsA = getRows('matrix-' + i);
             let tempColumnsA = $('#matrix-' + i).find('#row-' + i).children().length;
             let tempRowsB = getRows('matrix-' + next);
@@ -310,17 +312,17 @@ $( document ).ready(function() {
             if (operation === 'add' || operation === 'subtract') {
                 if (tempRowsA !== tempRowsB || tempColumnsA !== tempColumnsB) {
                     errorStatus = true;
-                    errorMsg = 'Addition or Subtraction:  Rows and Columns of all matrices must be equal.';
+                    errorMsg = `<span class="highlight">Addition or Subtraction:</span>  The number of rows and columns in <span class="highlight">${matrixA}</span> must be equal to the number of rows and columns in <span class="highlight">${matrixB}</span>.  Please fix this to continue.`;
                 } 
             } else if (operation === 'multiply') {
                 if (tempColumnsA !== tempRowsB) {
                     errorStatus = true;
-                    errorMsg = 'Multiplication: The number of columns in Matrix 1 must be equal to the number of rows in Matrix 2. If you\'re using more that two matrices then the number of columns in Matrix 2 must be equal to the number of rows in Matrix 3 and so on.';
+                    errorMsg = `<span class="highlight">Multiplication:</span> The number of columns in <span class="highlight">${matrixA}</span> must be equal to the number of rows in <span class="highlight">${matrixB}</span>.  Please fix this in order to continue.`;
                 } 
             } else if (operation === 'divide') {
                 if (tempColumnsA !== tempColumnsB) {
                     errorStatus = true;
-                    errorMsg = 'Division:  The number of columns in Matrix 1 must be equal to the number of columns in Matrix 2.  If you\'re using more that two matrices then the number of columns in Matrix 2 must be equal to the number of rows in Matrix 3 and so on.';
+                    errorMsg = `<span class="highlight">Division:</span>  The number of columns in <span class="highlight">${matrixA}</span> must be equal to the number of columns in <span class="highlight">${matrixB}</span>.  Please fix this to continue.`;
                 }
             }
         }

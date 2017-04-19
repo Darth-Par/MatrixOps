@@ -52,3 +52,8 @@ table.result-matrix td {
     width: 90%;
     
 }
+
+.modal span.highlight {
+    font-weight: bold;
+    color: red;
+}
